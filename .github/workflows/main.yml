@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
+      - run: npm install
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.TOKEN_PACKAGE}}
@@ -41,7 +41,7 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: "@mattlegrizzly"
-      - run: npm ci
+      - run: npm install
       - run: echo registry=https://npm.pkg.github.com/mattlegrizzly >> .npmrc
       - run: npm publish
         env:
