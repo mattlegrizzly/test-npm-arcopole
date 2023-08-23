@@ -16,7 +16,6 @@ jobs:
           scope: "@mattlegrizzly"
       - run: npm install
       - run: npm run build
-      - run: npm adduser
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.TOKEN_PACKAGE}}
