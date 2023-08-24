@@ -1,5 +1,5 @@
 {
-  "name": "@mattlegrizzly/test-package-arcopole",
+  "name": "@mattlegrizzly/test-npm-arcopole",
   "version": "1.0.0",
   "description": "This project is a poc for deploy a library and try restriction access, and fetch for widgets JS",
   "main": "./build/app.js",
