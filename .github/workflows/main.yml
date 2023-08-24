@@ -18,7 +18,9 @@ jobs:
       - run: npm run build
       - name: Log in to NPM
         run: |
-          echo "//npm.pkg.github.com/:_authToken=\${{secrets.NPM_IDENTIFICATION}}" > ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=\${{secrets.NPM_IDENTIFICATION}}" > ~/.npmrc"
+      - name: Verify NPM Token
+        run: npm whoami
       - run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_IDENTIFICATION }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
