@@ -16,9 +16,6 @@ jobs:
           scope: "@mattlegrizzly"
       - run: npm install
       - run: npm run build
-      - name: Log in to NPM
-        run: |
-          echo "//npm.pkg.github.com/:_authToken=\${{secrets.NPM_IDENTIFICATION}}" > ~/.npmrc
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
