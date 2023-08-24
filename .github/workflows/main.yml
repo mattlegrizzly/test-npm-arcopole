@@ -21,4 +21,4 @@ jobs:
           echo "//npm.pkg.github.com/:_authToken=\${{secrets.NPM_IDENTIFICATION}}" > ~/.npmrc
       - run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_IDENTIFICATION }}
