@@ -10,6 +10,9 @@
   },
   "repository": "git://github.com/mattlegrizzly/test-npm-arcopole",
   "author": "",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
