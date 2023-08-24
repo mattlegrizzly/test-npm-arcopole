@@ -1,8 +1,9 @@
 name: Node.js Package
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main # ou la branche de votre choix
 
 jobs:
   publish-gpr:
@@ -12,11 +13,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          registry-url: https://npm.pkg.github.com/:_authToken=${{secrets.TOKEN_NPM}}
           scope: "@mattlegrizzly"
       - run: npm install
       - run: npm run build
-
-      - run: npm publish
+      - run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.TOKEN_PACKAGE}}
+          NODE_AUTH_TOKEN: ${{secrets.arcopole-npm-package}}

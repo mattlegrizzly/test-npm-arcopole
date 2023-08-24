@@ -1,5 +1,5 @@
 {
-  "name": "@matteo_andre/test-package-arcopole",
+  "name": "@mattlegrizzly/test-package-arcopole",
   "version": "1.0.0",
   "description": "This project is a poc for deploy a library and try restriction access, and fetch for widgets JS",
   "main": "./build/app.js",
@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx tsc"
   },
-  "repository": "git://gitlab.com/matteo_andre/test-library-npm.git",
+  "repository": "git://github.com/mattlegrizzly/test-npm-arcopole",
   "author": "",
   "license": "ISC",
   "dependencies": {
